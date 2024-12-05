@@ -14,6 +14,12 @@ importers:
       '@mantine/hooks':
         specifier: ^7.14.3
         version: 7.14.3(react@19.0.0-rc-66855b96-20241106)
+      '@mantine/nprogress':
+        specifier: ^7.14.3
+        version: 7.14.3(@mantine/core@7.14.3(@mantine/hooks@7.14.3(react@19.0.0-rc-66855b96-20241106))(@types/react@18.3.13)(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106))(@mantine/hooks@7.14.3(react@19.0.0-rc-66855b96-20241106))(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       next:
         specifier: 15.0.3
         version: 15.0.3(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)
@@ -256,6 +262,19 @@ packages:
 
   '@mantine/hooks@7.14.3':
     resolution: {integrity: sha512-cU3R9b8GLs6aCvpsVC56ZOOJCUIoDqX3RcLWkcfpA5a47LjWa/rzegP4YWfNW6/E9vodPJT4AEbYXVffYlyNwA==}
+    peerDependencies:
+      react: ^18.x || ^19.x
+
+  '@mantine/nprogress@7.14.3':
+    resolution: {integrity: sha512-LDhe+sLq3AWB15v+cXvnV6fn/pDf5qbGT5N7nkZ44Vn6x0X7mE2ChlLZuvu22PAEx7XqEHhCgOiUemKHT9QhSQ==}
+    peerDependencies:
+      '@mantine/core': 7.14.3
+      '@mantine/hooks': 7.14.3
+      react: ^18.x || ^19.x
+      react-dom: ^18.x || ^19.x
+
+  '@mantine/store@7.14.3':
+    resolution: {integrity: sha512-o15vbTUNlLqD/yLOtEClnc4fY2ONDaCZiaL9REUy0xhCDbVTeeqnu9BV604yuym50ZH5mhMHix1TX3K9vGsWvA==}
     peerDependencies:
       react: ^18.x || ^19.x
 
@@ -2019,6 +2038,18 @@ snapshots:
       - '@types/react'
 
   '@mantine/hooks@7.14.3(react@19.0.0-rc-66855b96-20241106)':
+    dependencies:
+      react: 19.0.0-rc-66855b96-20241106
+
+  '@mantine/nprogress@7.14.3(@mantine/core@7.14.3(@mantine/hooks@7.14.3(react@19.0.0-rc-66855b96-20241106))(@types/react@18.3.13)(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106))(@mantine/hooks@7.14.3(react@19.0.0-rc-66855b96-20241106))(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)':
+    dependencies:
+      '@mantine/core': 7.14.3(@mantine/hooks@7.14.3(react@19.0.0-rc-66855b96-20241106))(@types/react@18.3.13)(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)
+      '@mantine/hooks': 7.14.3(react@19.0.0-rc-66855b96-20241106)
+      '@mantine/store': 7.14.3(react@19.0.0-rc-66855b96-20241106)
+      react: 19.0.0-rc-66855b96-20241106
+      react-dom: 19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106)
+
+  '@mantine/store@7.14.3(react@19.0.0-rc-66855b96-20241106)':
     dependencies:
       react: 19.0.0-rc-66855b96-20241106
 

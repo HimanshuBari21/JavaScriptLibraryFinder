@@ -1,5 +1,13 @@
+import SearchBox from "@/components/SearchBox";
+
 const Home = () => {
-  return <h1>JavaScriptLibraryFinder</h1>;
+  return (
+    <section>
+      <div className="container">
+        <SearchBox />
+      </div>
+    </section>
+  );
 };
 
 export default Home;
