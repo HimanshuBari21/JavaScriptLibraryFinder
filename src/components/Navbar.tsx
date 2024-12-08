@@ -1,8 +1,9 @@
 import clsx from "clsx";
-import { FC, HTMLAttributes } from "react";
+import Link from "next/link";
+import { FC, HTMLAttributes, ReactNode } from "react";
 
 type NavBarProps = HTMLAttributes<HTMLElement> & {
-  heading: string;
+  heading: string | ReactNode;
   subHeading?: string;
 };
 
@@ -15,11 +16,20 @@ const NavBar: FC<NavBarProps> = (props) => {
   } = props;
 
   return (
-    <nav className={clsx("", className)} {...rest}>
-      <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row gap-4 items-center">
-          <h1 className="text-lg md:text-3xl px-2 md:px-0">{heading}</h1>
+    <nav className={clsx("container mx-auto", className)} {...rest}>
+      <div className="flex gap-4 items-center justify-between">
+        <div>
+          <Link href={"/"}>
+            <h1 className="text-lg md:text-3xl px-2 font-bold text-orange-600">
+              {heading}
+            </h1>
+          </Link>
           <h2 className="hidden md:block">{subHeading}</h2>
+        </div>
+        <div>
+          <Link href={"/my-fav"} className="px-2">
+            {"FAV"}
+          </Link>
         </div>
       </div>
     </nav>

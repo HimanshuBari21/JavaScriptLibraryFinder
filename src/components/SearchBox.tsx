@@ -1,21 +1,22 @@
 import { searchLibraries } from "@/utils/libraryData";
 import { Autocomplete, AutocompleteProps } from "@mantine/core";
-import { useState } from "react";
+import { FC } from "react";
 
-export type SearchBox = AutocompleteProps;
+export type SearchBoxProps = AutocompleteProps & {
+  query?: string;
+  setQuery?: (query: string) => void;
+};
 
-const SearchBox = () => {
-  const [query, setQuery] = useState("");
+const SearchBox: FC<SearchBoxProps> = ({ query, ...rest }) => {
   const suggestions = searchLibraries(query);
-  console.log(suggestions);
 
   return (
     <Autocomplete
       label="Search for feature"
       placeholder="Eg: API fetching, localization, animation etc"
       data={suggestions}
-      onChange={setQuery}
-      dropdownOpened={!!query.length}
+      // onSelect={() => setIsOpen(false)}
+      {...rest}
     />
   );
 };

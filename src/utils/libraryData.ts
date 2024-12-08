@@ -32,7 +32,7 @@ export const libraries: Library[] = [
   },
 ];
 
-export function searchLibraries(query: string): string[] {
+export function searchLibraries(query: string = ""): string[] {
   const lowercaseQuery = query.toLowerCase();
   return Array.from(
     new Set(
