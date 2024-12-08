@@ -1,6 +1,13 @@
+import Head from "next/head";
+
 const MyFav = () => {
   return (
-    <h1>Your Favourite marked libraries will be saved here - In progress</h1>
+    <>
+      <Head>
+        <title>JavaScriptLibraryFinder - Favourites</title>
+      </Head>
+      <h1>Your Favourite marked libraries will be saved here - In progress</h1>
+    </>
   );
 };
 
