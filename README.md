@@ -8,7 +8,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, install all the dependencies
 
 ```bash
-pnpm run dev
+pnpm install
 ```
 
 Then, run the development server:
