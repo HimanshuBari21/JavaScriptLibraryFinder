@@ -196,6 +196,10 @@ export function searchLibraries(query: string = ""): string[] {
 }
 
 export function getLibrariesByTask(task: string): Library[] {
+  if (!task) {
+    return libraries;
+  }
+
   return libraries.filter((lib) =>
     lib.tasks.some((t) => t.toLowerCase() === task.toLowerCase())
   );

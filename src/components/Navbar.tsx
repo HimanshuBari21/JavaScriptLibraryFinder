@@ -1,3 +1,4 @@
+import { HeartIcon } from "@heroicons/react/16/solid";
 import clsx from "clsx";
 import Link from "next/link";
 import { FC, HTMLAttributes, ReactNode } from "react";
@@ -17,10 +18,10 @@ const NavBar: FC<NavBarProps> = (props) => {
 
   return (
     <nav className={clsx("container mx-auto", className)} {...rest}>
-      <div className="flex gap-4 items-center justify-between">
+      <div className="flex gap-4 items-center justify-between px-4 md:px-2">
         <div>
           <Link href={"/"}>
-            <h1 className="text-lg md:text-3xl px-2 font-bold text-orange-600">
+            <h1 className="text-lg md:text-3xl font-bold text-orange-600">
               {heading}
             </h1>
           </Link>
@@ -28,7 +29,7 @@ const NavBar: FC<NavBarProps> = (props) => {
         </div>
         <div>
           <Link href={"/my-fav"} className="px-2">
-            {"FAV"}
+            <HeartIcon width={28} />
           </Link>
         </div>
       </div>

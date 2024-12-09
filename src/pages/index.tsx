@@ -19,11 +19,14 @@ const Home = () => {
         <title>JavaScriptLibraryFinder - There is a JS Library for that!</title>
       </Head>
       <div className="container mx-auto">
+        <h2 className="text-3xl md:text-6xl text-center py-12 font-bold leading-loose">
+          There is a JavaScript library for that
+          <span className="text-5xl"> 🚀</span>
+        </h2>
         <SearchBox
           query={query}
           onChange={setQuery}
           onOptionSubmit={setSelectedOption}
-          dropdownOpened={!!query?.length && !selectedOption.length}
         />
         <Results selectedOption={selectedOption} />
       </div>

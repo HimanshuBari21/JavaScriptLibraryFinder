@@ -6,7 +6,14 @@ const MyFav = () => {
       <Head>
         <title>JavaScriptLibraryFinder - Favourites</title>
       </Head>
-      <h1>Your Favourite marked libraries will be saved here - In progress</h1>
+      <section>
+        <div className="container mx-auto">
+          <h1>
+            Your Favourite marked libraries will be saved here - feature in
+            progress
+          </h1>
+        </div>
+      </section>
     </>
   );
 };

@@ -12,10 +12,15 @@ const SearchBox: FC<SearchBoxProps> = ({ query, ...rest }) => {
 
   return (
     <Autocomplete
-      label="Search for feature"
-      placeholder="Eg: API fetching, localization, animation etc"
+      label="I am looking for "
+      placeholder="data fetching, localization, animation etc"
       data={suggestions}
-      // onSelect={() => setIsOpen(false)}
+      className="max-w-[600px] mx-auto flex flex-col md:flex-row md:items-center justify-center"
+      classNames={{
+        input:
+          "!h-8 !border-b-black !text-xl !border-x-0 !border-t-0 !rounded-none !pl-0 md:ml-2 font-semibold",
+        label: "py-4 !text-xl",
+      }}
       {...rest}
     />
   );
