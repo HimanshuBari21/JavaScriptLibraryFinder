@@ -195,8 +195,8 @@ export function searchLibraries(query: string = ""): string[] {
   );
 }
 
-export function getLibrariesByTask(task: string): Library[] {
-  if (!task) {
+export function getLibrariesByTask(task: string = ""): Library[] {
+  if (!task.length) {
     return libraries;
   }
 

@@ -1,5 +1,5 @@
-import Results from "@/components/Results";
 import SearchBox from "@/components/SearchBox";
+import SearchResults from "@/components/SearchResults";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 
@@ -28,7 +28,7 @@ const Home = () => {
           onChange={setQuery}
           onOptionSubmit={setSelectedOption}
         />
-        <Results selectedOption={selectedOption} />
+        <SearchResults selectedOption={selectedOption} />
       </div>
     </section>
   );
