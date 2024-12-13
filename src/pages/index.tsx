@@ -21,7 +21,7 @@ const Home = () => {
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-6xl text-center py-12 font-bold leading-loose">
           There is a JavaScript library for that
-          <span className="text-5xl"> 🚀</span>
+          <span className="md:text-5xl"> 🚀</span>
         </h2>
         <SearchBox
           query={query}
