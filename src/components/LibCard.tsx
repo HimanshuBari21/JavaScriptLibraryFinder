@@ -45,7 +45,7 @@ const LibCard: FC<LibCardProps> = ({ lib, addFav, isFaved, className }) => {
       </div>
       <p className="text-gray-800 text-sm pt-3">{lib.description}</p>
       <p className="italic text-sm text-gray-700 pt-3">
-        search keywords: {lib.tasks}
+        search keywords: {lib.tasks.join(", ")}
       </p>
     </article>
   );
