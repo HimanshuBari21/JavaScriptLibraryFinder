@@ -13,13 +13,22 @@ const Results: FC<ResultsProps> = ({ resultLibraries }) => {
     defaultValue: [""],
   });
 
+  const handleAddFav = (libName: string) => {
+    if (favLibs.includes(libName)) {
+      setFavLibs(favLibs.filter((l) => l !== libName));
+    } else {
+      setFavLibs([...favLibs, libName]);
+    }
+  };
+
   return (
     <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 py-4">
       {resultLibraries?.map((lib, i) => (
         <LibCard
           key={i}
           lib={lib}
-          addFav={(libName) => setFavLibs([...favLibs, libName])}
+          addFav={handleAddFav}
+          isFaved={favLibs.includes(lib.name)}
         />
       ))}
     </div>

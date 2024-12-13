@@ -1,6 +1,7 @@
 import { HeartIcon } from "@heroicons/react/16/solid";
 import clsx from "clsx";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { FC, HTMLAttributes, ReactNode } from "react";
 
 type NavBarProps = HTMLAttributes<HTMLElement> & {
@@ -16,12 +17,14 @@ const NavBar: FC<NavBarProps> = (props) => {
     ...rest
   } = props;
 
+  const { pathname } = useRouter();
+
   return (
     <nav className={clsx("container mx-auto", className)} {...rest}>
       <div className="flex gap-4 items-center justify-between px-4 md:px-2">
         <div>
           <Link href={"/"} title="Search Libraries">
-            <h1 className="text-lg md:text-3xl font-bold text-orange-600">
+            <h1 className="text-lg md:text-3xl font-bold text-white">
               {heading}
             </h1>
           </Link>
@@ -29,7 +32,11 @@ const NavBar: FC<NavBarProps> = (props) => {
         </div>
         <div>
           <Link href={"/my-fav"} className="px-2" title="My Favourites">
-            <HeartIcon width={28} />
+            <HeartIcon
+              stroke="white"
+              color={pathname === "/my-fav" ? "red" : "white"}
+              width={28}
+            />
           </Link>
         </div>
       </div>

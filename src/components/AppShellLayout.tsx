@@ -5,7 +5,7 @@ import NavBar from "@/components/Navbar";
 const AppShellLayout: FC<AppShellProps> = ({ children, ...rest }) => {
   return (
     <AppShell header={{ height: 80 }} padding="md" {...rest}>
-      <AppShell.Header className="flex items-center">
+      <AppShell.Header className="flex items-center !bg-jet-red">
         <NavBar heading="JavaScriptLibraryFinder" subHeading="" />
       </AppShell.Header>
 

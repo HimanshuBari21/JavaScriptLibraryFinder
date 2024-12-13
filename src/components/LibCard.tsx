@@ -1,22 +1,36 @@
 import { type Library } from "@/utils/libraryData";
-import { StarIcon } from "@heroicons/react/16/solid";
+import { StarIcon, HeartIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
 import type { FC, HTMLAttributes } from "react";
 
 export type LibCardProps = HTMLAttributes<HTMLElement> & {
   lib: Library;
   addFav: (libName: string) => void;
+  isFaved: boolean;
 };
 
-const LibCard: FC<LibCardProps> = ({ lib, addFav }) => {
+const LibCard: FC<LibCardProps> = ({ lib, addFav, isFaved }) => {
   return (
-    <article className="border px-4 p-2 rounded-md  hover:shadow-md">
+    <article className="border px-4 p-2 rounded-md  hover:shadow-md relative">
       <div className="flex justify-between items-center">
-        <h3 className="text-2xl font-semibold">
-          <Link href={lib.repository} target="_blank" rel="noreferrer">
-            {lib.name}
-          </Link>
-        </h3>
+        <div className="flex items-center justify-start gap-2">
+          <button
+            onClick={() => addFav(lib.name)}
+            className="-mb-1"
+            title={isFaved ? "Remove Fav" : "Add Fav"}
+          >
+            <HeartIcon
+              width={20}
+              color={isFaved ? "" : "white"}
+              stroke="black"
+            />
+          </button>
+          <h3 className="text-2xl font-semibold">
+            <Link href={lib.repository} target="_blank" rel="noreferrer">
+              {lib.name}
+            </Link>
+          </h3>
+        </div>
         <span className="flex gap-1 px-2 text-xs border rounded-full items-center h-6">
           <StarIcon width={12} />
           {lib.stars}
@@ -26,7 +40,6 @@ const LibCard: FC<LibCardProps> = ({ lib, addFav }) => {
       <p className="italic text-sm text-gray-700 pt-3">
         search keywords: {lib.tasks}
       </p>
-      <button onClick={() => addFav(lib.name)}>Add fav</button>
     </article>
   );
 };
