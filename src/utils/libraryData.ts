@@ -115,7 +115,7 @@ export const libraries: Library[] = [
   {
     name: "tailwindcss",
     description: "A utility-first CSS framework",
-    tasks: ["CSS", "styling"],
+    tasks: ["CSS", "styling", "ui"],
     stars: 74000,
     repository: "https://github.com/tailwindlabs/tailwindcss",
   },
@@ -181,6 +181,115 @@ export const libraries: Library[] = [
     tasks: ["web scraping", "automation"],
     stars: 85000,
     repository: "https://github.com/puppeteer/puppeteer",
+  },
+  {
+    name: "mantine-ui",
+    description: "A fully featured React components library",
+    tasks: ["ui library", "components", "hooks"],
+    stars: 27000,
+    repository: "https://github.com/mantinedev/mantine",
+  },
+  {
+    name: "material-ui",
+    description:
+      "Material UI: Comprehensive React component library that implements Google's Material Design.",
+    tasks: ["ui library", "components", "hooks", "material"],
+    stars: 32000,
+    repository: "https://github.com/mui/material-ui",
+  },
+  {
+    name: "isomorphic-dompurify",
+    description:
+      "The library makes it possible to seamlessly use DOMPurify on server and client in the same way",
+    tasks: ["sanitization", "security", "web-security"],
+    repository: "https://github.com/kkomelin/isomorphic-dompurify",
+    stars: 429,
+  },
+  {
+    name: "parallaxjs",
+    description:
+      "Simple parallax scrolling effect inspired by Spotify.com implemented as a jQuery plugin",
+    tasks: ["parallax-scroll", "animation", "css-effects"],
+    repository: "https://github.com/pixelcog/parallax.js",
+    stars: 3538,
+  },
+  {
+    name: "react-hook-form",
+    description:
+      " React Hooks for form state management and validation (Web + React Native)",
+    tasks: ["forms", "validation", "app-form"],
+    stars: 41000,
+    repository: "https://github.com/jaredpalmer/formik",
+  },
+  {
+    name: "downshift",
+    description:
+      "A set of primitives to build simple, flexible, WAI-ARIA compliant React autocomplete, combobox or select dropdown components.",
+    tasks: ["combobox", "search-box", "dropdown", "ui"],
+    repository: "https://github.com/downshift-js/downshift",
+    stars: 12100,
+  },
+  {
+    name: "swiper",
+    description:
+      "Most modern mobile touch slider with hardware accelerated transitions",
+    repository:
+      "Most modern mobile touch slider with hardware accelerated transitions",
+    tasks: ["carousel", "ui", "hero", "slider"],
+    stars: 40000,
+  },
+  {
+    name: "react-player",
+    description:
+      "A React component for playing a variety of URLs, including file paths, YouTube, Facebook, Twitch, SoundCloud, Streamable, Vimeo, Wistia and DailyMotion",
+    tasks: ["video", "playback", "media"],
+    stars: 9469,
+    repository: "https://github.com/cookpete/react-player",
+  },
+  {
+    name: "clsx",
+    description:
+      "A tiny (239B) utility for constructing `className` strings conditionally.",
+    tasks: ["className", "strings", "reusablity"],
+    stars: 8446,
+    repository: "https://github.com/lukeed/clsx",
+  },
+  {
+    name: "qs",
+    description: "A querystring parser with nesting support",
+    tasks: ["encoding", "url", "query", "route", "api"],
+    stars: 8595,
+    repository: "https://github.com/ljharb/qs",
+  },
+  {
+    name: "react-toastify",
+    description: "React notification made easy 🚀 !",
+    tasks: ["toast", "ui", "alert", "notify", "message"],
+    stars: 12815,
+    repository: "https://github.com/fkhadra/react-toastify",
+  },
+  {
+    name: "constate",
+    description: "React Context + State",
+    tasks: ["state management", "shared-state"],
+    stars: 3952,
+    repository: "https://github.com/diegohaz/constate",
+  },
+  {
+    name: "tui.image-editor",
+    description:
+      "Full-featured photo image editor using canvas. It is really easy, and it comes with great filters.",
+    tasks: ["image", "media", "crop", "editing"],
+    stars: 7100,
+    repository: "https://github.com/nhn/tui.image-editor",
+  },
+  {
+    name: "react-swift-reveal",
+    description:
+      "React-swift-reveal is a React component library and animation framework for animating elements as they enter the viewport and onscroll",
+    tasks: ["animation", "effects", "ui"],
+    stars: 48,
+    repository: "https://github.com/Mutesa-Cedric/react-swift-reveal",
   },
 ];
 
