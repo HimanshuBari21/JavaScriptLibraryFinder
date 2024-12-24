@@ -63,14 +63,14 @@ const Document = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="JavaScriptLibraryFinder: There is a JavaScript library for that"
+          content="JavaScriptLibraryFinder: There is a JavaScript library for that!"
         />
         <meta property="og:description" content={metaDescription} />
         <meta
           property="og:image"
           content={"https://js-library-finder.vercel.app/og-image.png"}
         />
-        <meta property="og:site_name" content="LinksHub" />
+        <meta property="og:site_name" content="JavaScriptLibraryFinder" />
 
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -80,7 +80,7 @@ const Document = () => {
         />
         <meta
           property="twitter:title"
-          content="LinksHub: A hub of ready-to-use tech resources"
+          content="JavaScriptLibraryFinder: There is a JavaScript library for that!"
         />
         <meta property="twitter:description" content={metaDescription} />
         <meta
