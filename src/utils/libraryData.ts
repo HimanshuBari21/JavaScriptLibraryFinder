@@ -296,11 +296,17 @@ export const libraries: Library[] = [
 export function searchLibraries(query: string = ""): string[] {
   const lowercaseQuery = query.toLowerCase();
   return Array.from(
-    new Set(
-      libraries.flatMap((lib) =>
+    new Set([
+      ...libraries.flatMap((lib) =>
         lib.tasks.filter((task) => task.toLowerCase().includes(lowercaseQuery))
-      )
-    )
+      ),
+
+      ...libraries.flatMap((lib) =>
+        lib.description
+          .split(" ")
+          .filter((word) => word.toLowerCase().includes(lowercaseQuery))
+      ),
+    ])
   );
 }
 
@@ -309,7 +315,11 @@ export function getLibrariesByTask(task: string = ""): Library[] {
     return libraries;
   }
 
-  return libraries.filter((lib) =>
-    lib.tasks.some((t) => t.toLowerCase() === task.toLowerCase())
+  return libraries.filter(
+    (lib) =>
+      lib.tasks.some((t) => t.toLowerCase() === task.toLowerCase()) ||
+      lib.description
+        .split(" ")
+        .some((word) => word.toLowerCase() === task.toLowerCase())
   );
 }
