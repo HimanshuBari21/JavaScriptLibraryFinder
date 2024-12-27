@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 import { ColorSchemeScript } from "@mantine/core";
 
 const metaDescription =
-  "JavaSCriptLinraryFinder is a hub of ready-to-use tech resources. Find free tools, software, libraries, frameworks, applications, websites and more as per your task and requirements.";
+  "JavaScriptLibraryFinder is a free tool to find software, libraries, frameworks, applications, websites and more as per your task and requirements.";
 
 const Document = () => {
   return (
