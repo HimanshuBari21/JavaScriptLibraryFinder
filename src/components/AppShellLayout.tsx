@@ -18,21 +18,14 @@ const AppShellLayout: FC<AppShellProps> = ({ children, ...rest }) => {
 
       <AppShell.Main className="mb-4">{children}</AppShell.Main>
       <AppShell.Footer>
-        <p className="text-center w-full flex justify-center gap-1 py-2">
-          {"Made with "}
-          <span className="mt-1">
-            <HeartIcon fill="red" width={20} />
-          </span>
-          {" by "}
-          <Link target="_blank" href="https://github.com/HimanshuBari21">
-            {" Himanshu Bari "}
-          </Link>
-          {"and "}
-          <Link
-            target="_blank"
-            href="https://github.com/HimanshuBari21/JavaScriptLibraryFinder"
-          >
-            {"Open Source community."}
+        <p className="text-center items-center w-full flex justify-center gap-1 py-2 flex-wrap">
+          Made with <HeartIcon className="size-5 text-red-500" /> by{" "}
+          <Link href="https://github.comhttps://github.com/HimanshuBari21">
+            Himanshu Bari
+          </Link>{" "}
+          and{" "}
+          <Link href="https://github.com/HimanshuBari21/JavaScriptLibraryFinder">
+            Open Source
           </Link>
         </p>
       </AppShell.Footer>
