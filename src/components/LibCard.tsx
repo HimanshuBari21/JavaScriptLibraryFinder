@@ -33,7 +33,12 @@ const LibCard: FC<LibCardProps> = ({ lib, addFav, isFaved, className }) => {
             />
           </button>
           <h3 className="text-2xl font-semibold hover:text-jet-red underline">
-            <Link href={lib.repository} target="_blank" rel="noreferrer">
+            <Link
+              href={lib.repository}
+              target="_blank"
+              rel="noreferrer"
+              className="line-clamp-1"
+            >
               {lib.name}
             </Link>
           </h3>

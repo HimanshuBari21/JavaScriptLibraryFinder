@@ -1,7 +1,109 @@
+export type TaskTag =
+  | "localization"
+  | "translation"
+  | "date"
+  | "time"
+  | "array"
+  | "object"
+  | "string"
+  | "http"
+  | "ajax"
+  | "request"
+  | "data fetching"
+  | "caching"
+  | "manipulation"
+  | "utility"
+  | "forms"
+  | "validation"
+  | "schemas"
+  | "state management"
+  | "react"
+  | "redux"
+  | "charts"
+  | "data visualization"
+  | "3D rendering"
+  | "visualization"
+  | "websockets"
+  | "real-time"
+  | "CSS"
+  | "styling"
+  | "UI components"
+  | "routing"
+  | "navigation"
+  | "authentication"
+  | "OAuth"
+  | "web server"
+  | "backend"
+  | "framework"
+  | "MongoDB"
+  | "ODM"
+  | "ORM"
+  | "database"
+  | "emails"
+  | "SMTP"
+  | "web scraping"
+  | "automation"
+  | "components"
+  | "hooks"
+  | "sanitization"
+  | "security"
+  | "web-security"
+  | "parallax-scroll"
+  | "animation"
+  | "css-effects"
+  | "app-form"
+  | "combobox"
+  | "search-box"
+  | "dropdown"
+  | "carousel"
+  | "hero"
+  | "slider"
+  | "video"
+  | "playback"
+  | "media"
+  | "className"
+  | "strings"
+  | "reusablity"
+  | "encoding"
+  | "url"
+  | "query"
+  | "route"
+  | "api"
+  | "toast"
+  | "alert"
+  | "notify"
+  | "message"
+  | "shared-state"
+  | "image"
+  | "crop"
+  | "editing"
+  | "effects"
+  | "maps"
+  | "geo"
+  | "location"
+  | "icons"
+  | "svg"
+  | "drag-and-drop"
+  | "lists"
+  | "blockchain"
+  | "ethereum"
+  | "reactive"
+  | "declarative"
+  | "interactions"
+  | "select"
+  | "table"
+  | "lists"
+  | "declarative"
+  | "ui"
+  | "material"
+  | "css"
+  | "data"
+  | "web3";
+
 export interface Library {
   name: string;
   description: string;
-  tasks: string[];
+  tasks: TaskTag[];
   stars: number; // Number of GitHub stars
   repository: string; // Repository URL
 }
@@ -185,7 +287,7 @@ export const libraries: Library[] = [
   {
     name: "mantine-ui",
     description: "A fully featured React components library",
-    tasks: ["ui library", "components", "hooks"],
+    tasks: ["ui", "components", "hooks"],
     stars: 27000,
     repository: "https://github.com/mantinedev/mantine",
   },
@@ -193,7 +295,7 @@ export const libraries: Library[] = [
     name: "material-ui",
     description:
       "Material UI: Comprehensive React component library that implements Google's Material Design.",
-    tasks: ["ui library", "components", "hooks", "material"],
+    tasks: ["ui", "components", "hooks", "material"],
     stars: 32000,
     repository: "https://github.com/mui/material-ui",
   },
@@ -291,22 +393,104 @@ export const libraries: Library[] = [
     stars: 48,
     repository: "https://github.com/Mutesa-Cedric/react-swift-reveal",
   },
+  {
+    name: "react-leaflet",
+    description: "React components for Leaflet maps",
+    tasks: ["maps", "geo", "location"],
+    stars: 7000,
+    repository: "https://github.com/PaulLeCam/react-leaflet",
+  },
+  {
+    name: "react-icons",
+    description: "SVG React icons of popular icon packs",
+    tasks: ["icons", "svg", "ui"],
+    stars: 15000,
+    repository: "https://github.com/react-icons/react-icons",
+  },
+  {
+    name: "heroicons",
+    description:
+      "A set of free MIT-licensed high-quality SVG icons for you to use in your web projects.",
+    tasks: ["icons", "svg", "ui"],
+    stars: 15000,
+    repository: "https://github.com/tailwindlabs/heroicons",
+  },
+  {
+    name: "react-select",
+    description: "The Select control for React.",
+    tasks: ["dropdown", "select", "ui"],
+    stars: 22000,
+    repository: "https://github.com/JedWatson/react-select",
+  },
+  {
+    name: "react-beautiful-dnd",
+    description: "Beautiful and accessible drag and drop for lists with React",
+    tasks: ["drag-and-drop", "ui", "lists"],
+    stars: 22000,
+    repository: "https://github.com/atlassian/react-beautiful-dnd",
+  },
+  {
+    name: "react-feather",
+    description: "Simply beautiful open source icons",
+    tasks: ["icons", "svg", "ui"],
+    stars: 20000,
+    repository: "https://github.com/feathericons/react-feather",
+  },
+  {
+    name: "emotion",
+    description: "The Next Generation of CSS-in-JS",
+    tasks: ["styling", "css"],
+    stars: 14000,
+    repository: "https://github.com/emotion-js/emotion",
+  },
+  {
+    name: "web3.js",
+    description: "Ethereum JavaScript API",
+    tasks: ["blockchain", "ethereum", "web3"],
+    stars: 14000,
+    repository: "https://github.com/web3/web3.js",
+  },
+  {
+    name: "TanStack-virtual",
+    description:
+      "Headless UI for Virtualizing Large Element Lists in JS/TS, React, Solid, Vue and Svelte",
+    tasks: ["reactive", "declarative", "ui"],
+    stars: 5700,
+    repository: "https://github.com/TanStack/virtual",
+  },
+  {
+    name: "TanStack-table",
+    description:
+      "Headless UI for building powerful tables & datagrids for TS/JS - React-Table, Vue-Table, Solid-Table, Svelte-Table",
+    tasks: ["table", "data", "ui"],
+    stars: 25000,
+    repository: "https://github.com/TanStack/table",
+  },
+  {
+    name: "react-window",
+    description:
+      "React components for efficiently rendering large lists and tabular data",
+    tasks: ["lists", "data", "ui"],
+    stars: 10000,
+    repository: "https://github.com/bvaughn/react-window",
+  },
+  {
+    name: "react-dnd",
+    description: "Drag and Drop for React",
+    tasks: ["drag-and-drop", "ui", "interactions"],
+    stars: 14000,
+    repository: "https://github.com/react-dnd/react-dnd/",
+  },
 ];
 
 export function searchLibraries(query: string = ""): string[] {
   const lowercaseQuery = query.toLowerCase();
   return Array.from(
-    new Set([
-      ...libraries.flatMap((lib) =>
+    new Set(
+      libraries.flatMap((lib) =>
         lib.tasks.filter((task) => task.toLowerCase().includes(lowercaseQuery))
-      ),
-
-      ...libraries.flatMap((lib) =>
-        lib.description
-          .split(" ")
-          .filter((word) => word.toLowerCase().includes(lowercaseQuery))
-      ),
-    ])
+      )
+    )
   );
 }
 
@@ -315,11 +499,7 @@ export function getLibrariesByTask(task: string = ""): Library[] {
     return libraries;
   }
 
-  return libraries.filter(
-    (lib) =>
-      lib.tasks.some((t) => t.toLowerCase() === task.toLowerCase()) ||
-      lib.description
-        .split(" ")
-        .some((word) => word.toLowerCase() === task.toLowerCase())
+  return libraries.filter((lib) =>
+    lib.tasks.some((t) => t.toLowerCase() === task.toLowerCase())
   );
 }

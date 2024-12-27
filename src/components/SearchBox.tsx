@@ -14,7 +14,7 @@ const SearchBox: FC<SearchBoxProps> = ({ query, ...rest }) => {
     <Autocomplete
       label="I am looking for "
       placeholder="data fetching, localization, animation etc"
-      data={suggestions}
+      data={suggestions.sort()}
       className="max-w-[600px] mx-auto flex flex-col md:flex-row md:items-center justify-center"
       classNames={{
         input:

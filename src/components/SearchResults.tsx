@@ -8,7 +8,10 @@ export type SearchResultsProps = HTMLAttributes<HTMLDivElement> & {
 
 const SearchResults: FC<SearchResultsProps> = ({ selectedOption = "" }) => {
   const resultLibraries = useMemo(
-    () => getLibrariesByTask(selectedOption),
+    () =>
+      getLibrariesByTask(selectedOption).sort((a, b) =>
+        a.name.localeCompare(b.name)
+      ),
     [selectedOption]
   );
 

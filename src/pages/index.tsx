@@ -29,6 +29,12 @@ const Home = () => {
           onOptionSubmit={setSelectedOption}
         />
         <SearchResults selectedOption={selectedOption} />
+        <p className="text-center text-xl pt-4 pb-8">
+          Didnt found what you are looking for? <br /> Raise an issue on{" "}
+          <a href="https://github.com/HimanshuBari21/JavaScriptLibraryFinder">
+            GitHub Repo
+          </a>
+        </p>
       </div>
     </section>
   );
