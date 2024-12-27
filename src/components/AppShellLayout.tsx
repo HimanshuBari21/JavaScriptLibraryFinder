@@ -20,9 +20,7 @@ const AppShellLayout: FC<AppShellProps> = ({ children, ...rest }) => {
       <AppShell.Footer>
         <p className="text-center items-center w-full flex justify-center gap-1 py-2 flex-wrap">
           Made with <HeartIcon className="size-5 text-red-500" /> by{" "}
-          <Link href="https://github.comhttps://github.com/HimanshuBari21">
-            Himanshu Bari
-          </Link>{" "}
+          <Link href="https://github.com/HimanshuBari21">Himanshu Bari</Link>{" "}
           and{" "}
           <Link href="https://github.com/HimanshuBari21/JavaScriptLibraryFinder">
             Open Source
