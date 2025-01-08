@@ -7,7 +7,7 @@ import { MantineProvider } from "@mantine/core";
 import { NavigationProgress } from "@mantine/nprogress";
 import AppShellLayout from "@/components/AppShellLayout";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

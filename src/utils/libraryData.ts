@@ -1,104 +1,105 @@
 export type TaskTag =
-  | "localization"
-  | "translation"
-  | "date"
-  | "time"
-  | "array"
-  | "object"
-  | "string"
-  | "http"
-  | "ajax"
-  | "request"
-  | "data fetching"
-  | "caching"
-  | "manipulation"
-  | "utility"
-  | "forms"
-  | "validation"
-  | "schemas"
-  | "state management"
-  | "react"
-  | "redux"
-  | "charts"
-  | "data visualization"
   | "3D rendering"
-  | "visualization"
-  | "websockets"
-  | "real-time"
-  | "CSS"
-  | "styling"
-  | "UI components"
-  | "routing"
-  | "navigation"
-  | "authentication"
-  | "OAuth"
-  | "web server"
-  | "backend"
-  | "framework"
-  | "MongoDB"
-  | "ODM"
-  | "ORM"
-  | "database"
-  | "emails"
-  | "SMTP"
-  | "web scraping"
-  | "automation"
-  | "components"
-  | "hooks"
-  | "sanitization"
-  | "security"
-  | "web-security"
-  | "parallax-scroll"
-  | "animation"
-  | "css-effects"
-  | "app-form"
-  | "combobox"
-  | "search-box"
-  | "dropdown"
-  | "carousel"
-  | "hero"
-  | "slider"
-  | "video"
-  | "playback"
-  | "media"
-  | "className"
-  | "strings"
-  | "reusablity"
-  | "encoding"
-  | "url"
-  | "query"
-  | "route"
-  | "api"
-  | "toast"
+  | "ajax"
   | "alert"
-  | "notify"
-  | "message"
-  | "shared-state"
-  | "image"
+  | "animation"
+  | "api"
+  | "app-form"
+  | "array"
+  | "async"
+  | "authentication"
+  | "automation"
+  | "backend"
+  | "blockchain"
+  | "canvas"
+  | "carousel"
+  | "caching"
+  | "className"
+  | "charts"
+  | "combobox"
+  | "components"
+  | "css"
+  | "css-effects"
   | "crop"
+  | "data"
+  | "database"
+  | "data fetching"
+  | "data visualization"
+  | "date"
+  | "declarative"
+  | "dropdown"
+  | "drag-and-drop"
   | "editing"
   | "effects"
-  | "maps"
-  | "geo"
-  | "location"
-  | "icons"
-  | "svg"
-  | "drag-and-drop"
-  | "lists"
-  | "blockchain"
+  | "emails"
+  | "encoding"
   | "ethereum"
-  | "reactive"
-  | "declarative"
+  | "facebook"
+  | "framework"
+  | "forms"
+  | "geo"
+  | "hero"
+  | "hooks"
+  | "http"
+  | "icons"
+  | "image"
   | "interactions"
-  | "select"
-  | "table"
   | "lists"
-  | "declarative"
-  | "ui"
+  | "location"
+  | "localization"
+  | "manipulation"
+  | "maps"
   | "material"
-  | "css"
-  | "data"
-  | "web3";
+  | "media"
+  | "message"
+  | "MongoDB"
+  | "navigation"
+  | "notify"
+  | "object"
+  | "ODM"
+  | "OAuth"
+  | "ORM"
+  | "parallax-scroll"
+  | "playback"
+  | "promise"
+  | "query"
+  | "react"
+  | "reactive"
+  | "real-time"
+  | "redux"
+  | "reusablity"
+  | "route"
+  | "routing"
+  | "request"
+  | "sanitization"
+  | "schemas"
+  | "search-box"
+  | "security"
+  | "select"
+  | "shared-state"
+  | "slider"
+  | "SMTP"
+  | "state management"
+  | "string"
+  | "strings"
+  | "styling"
+  | "svg"
+  | "table"
+  | "time"
+  | "toast"
+  | "translation"
+  | "ui"
+  | "UI components"
+  | "url"
+  | "utility"
+  | "validation"
+  | "video"
+  | "visualization"
+  | "web scraping"
+  | "web-security"
+  | "web server"
+  | "web3"
+  | "websockets";
 
 export interface Library {
   name: string;
@@ -217,14 +218,14 @@ export const libraries: Library[] = [
   {
     name: "tailwindcss",
     description: "A utility-first CSS framework",
-    tasks: ["CSS", "styling", "ui"],
+    tasks: ["css", "styling", "ui"],
     stars: 74000,
     repository: "https://github.com/tailwindlabs/tailwindcss",
   },
   {
     name: "bootstrap",
     description: "Popular front-end open-source toolkit",
-    tasks: ["CSS", "UI components"],
+    tasks: ["css", "UI components"],
     stars: 165000,
     repository: "https://github.com/twbs/bootstrap",
   },
@@ -480,6 +481,141 @@ export const libraries: Library[] = [
     tasks: ["drag-and-drop", "ui", "interactions"],
     stars: 14000,
     repository: "https://github.com/react-dnd/react-dnd/",
+  },
+  {
+    name: "GSAP",
+    description:
+      "A robust JavaScript library for high-performance animations, including timelines and tweens.",
+    tasks: ["animation", "css-effects", "parallax-scroll"],
+    stars: 88000,
+    repository: "https://github.com/greensock/GSAP",
+  },
+  {
+    name: "Anime.js",
+    description:
+      "A lightweight JavaScript animation library for creating complex animations with ease.",
+    tasks: ["animation", "css-effects", "ui", "effects"],
+    stars: 48000,
+    repository: "https://github.com/juliangarnier/anime",
+  },
+  {
+    name: "Framer Motion",
+    description:
+      "A production-ready React animation library for declarative animations and interactions.",
+    tasks: ["animation", "react", "declarative", "ui"],
+    stars: 20000,
+    repository: "https://github.com/framer/motion",
+  },
+  {
+    name: "Lottie",
+    description:
+      "A library for rendering Adobe After Effects animations as JSON with high performance on web and mobile.",
+    tasks: ["animation", "ui", "media", "css-effects"],
+    stars: 46000,
+    repository: "https://github.com/airbnb/lottie-web",
+  },
+  {
+    name: "React-Spring",
+    description:
+      "A spring-physics-based animation library for React for creating smooth animations.",
+    tasks: ["animation", "react", "ui", "declarative", "css-effects"],
+    stars: 26000,
+    repository: "https://github.com/pmndrs/react-spring",
+  },
+  {
+    name: "React-Use",
+    description:
+      "A collection of essential React hooks for state management, lifecycles, and side effects.",
+    tasks: ["hooks", "utility", "state management", "shared-state"],
+    stars: 39000,
+    repository: "https://github.com/streamich/react-use",
+  },
+  {
+    name: "React Query",
+    description:
+      "A powerful data-fetching library for managing server-state with hooks.",
+    tasks: ["hooks", "data fetching", "caching", "state management"],
+    stars: 36000,
+    repository: "https://github.com/TanStack/query",
+  },
+  {
+    name: "Redux Toolkit",
+    description:
+      "An opinionated toolkit for efficient Redux development with React, including hooks.",
+    tasks: ["redux", "state management", "hooks", "utility"],
+    stars: 10000,
+    repository: "https://github.com/reduxjs/redux-toolkit",
+  },
+  {
+    name: "Recoil",
+    description:
+      "A state management library for React applications with an emphasis on scalability.",
+    tasks: ["state management", "react", "hooks", "shared-state"],
+    stars: 20000,
+    repository: "https://github.com/facebookexperimental/Recoil",
+  },
+  {
+    name: "SWR",
+    description:
+      "A React hooks library for remote data fetching and caching, built by Vercel.",
+    tasks: ["hooks", "data fetching", "caching", "utility", "http"],
+    stars: 28000,
+    repository: "https://github.com/vercel/swr",
+  },
+  {
+    name: "D3.js",
+    description:
+      "A JavaScript library for producing dynamic, interactive data visualizations in web browsers using SVG, Canvas, and HTML.",
+    tasks: ["data visualization", "charts", "svg", "effects", "ui"],
+    stars: 106000,
+    repository: "https://github.com/d3/d3",
+  },
+  {
+    name: "Chart.js",
+    description:
+      "A simple yet flexible JavaScript library for creating responsive and interactive charts.",
+    tasks: ["charts", "data visualization", "canvas", "ui"],
+    stars: 62000,
+    repository: "https://github.com/chartjs/Chart.js",
+  },
+  {
+    name: "Recharts",
+    description:
+      "A composable charting library built on React components for data visualization.",
+    tasks: ["charts", "react", "data visualization", "UI components"],
+    stars: 21000,
+    repository: "https://github.com/recharts/recharts",
+  },
+  {
+    name: "Victory",
+    description:
+      "A React-based library for building modular and reusable charts and data visualizations.",
+    tasks: ["charts", "react", "data visualization", "ui"],
+    stars: 10000,
+    repository: "https://github.com/FormidableLabs/victory",
+  },
+  {
+    name: "ECharts",
+    description:
+      "A powerful, highly customizable, and cross-platform charting library based on JavaScript.",
+    tasks: ["charts", "data visualization", "ui"],
+    stars: 56000,
+    repository: "https://github.com/apache/echarts",
+  },
+  {
+    name: "use-async-modal",
+    description: "Wait for your Modal as Promise",
+    tasks: ["UI components", "async", "promise"],
+    stars: 5,
+    repository: "https://github.com/Harasz/use-async-modal",
+  },
+  {
+    name: "Sweet Alert",
+    description:
+      "A beautiful, responsive, highly customizable and accessible (WAI-ARIA) replacement for JavaScript's popup boxes. Zero dependencies",
+    repository: "https://github.com/sweetalert2/sweetalert2",
+    tasks: ["UI components", "async", "promise"],
+    stars: 17000,
   },
 ];
 
