@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@mantine/code-highlight": "^7.16.1",
     "@mantine/core": "^7.14.3",
     "@mantine/hooks": "^7.14.3",
     "@mantine/nprogress": "^7.14.3",

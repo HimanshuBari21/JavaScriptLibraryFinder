@@ -1,3 +1,4 @@
+import { formatNumber } from "@/utils/common";
 import { type Library } from "@/utils/libraryData";
 import { StarIcon, HeartIcon } from "@heroicons/react/16/solid";
 import clsx from "clsx";
@@ -45,7 +46,7 @@ const LibCard: FC<LibCardProps> = ({ lib, addFav, isFaved, className }) => {
         </div>
         <span className="flex gap-1 px-2 text-xs border rounded-full items-center h-6">
           <StarIcon width={12} />
-          {lib.stars}
+          {formatNumber(lib.stars)}
         </span>
       </div>
       <p className="text-gray-800 text-sm pt-3">{lib.description}</p>

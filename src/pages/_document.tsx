@@ -1,12 +1,12 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { ColorSchemeScript } from "@mantine/core";
+import { ColorSchemeScript, mantineHtmlProps } from "@mantine/core";
 
 const metaDescription =
   "JavaScriptLibraryFinder is a free tool to find software, libraries, frameworks, applications, websites and more as per your task and requirements.";
 
 const Document = () => {
   return (
-    <Html lang="en">
+    <Html lang="en" {...mantineHtmlProps}>
       <Head>
         {/* <link
           rel="apple-touch-icon"
@@ -96,7 +96,7 @@ const Document = () => {
           content="https://discord.com/invite/NvK67YnJX5"
         /> */}
 
-        <ColorSchemeScript defaultColorScheme="auto" />
+        <ColorSchemeScript defaultColorScheme="light" />
       </Head>
       <body className="antialiased">
         <Main />
