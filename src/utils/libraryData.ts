@@ -75,6 +75,7 @@ export type TaskTag =
   | "schemas"
   | "search-box"
   | "security"
+  | "seo"
   | "select"
   | "shared-state"
   | "slider"
@@ -616,6 +617,27 @@ export const libraries: Library[] = [
     repository: "https://github.com/sweetalert2/sweetalert2",
     tasks: ["UI components", "async", "promise"],
     stars: 17000,
+  },
+  {
+    name: "React Bits",
+    description: "✨ React patterns, techniques, tips and tricks ✨",
+    tasks: ["animation", "UI components", "ui"],
+    stars: 1100,
+    repository: "https://github.com/vasanthk/react-bits",
+  },
+  {
+    name: "React-Lottie",
+    description: "Render After Effects animations on React based on lottie-web",
+    tasks: ["animation", "ui", "media"],
+    stars: 1700,
+    repository: "https://github.com/chenqingspring/react-lottie",
+  },
+  {
+    repository: "https://github.com/vercel/og-image",
+    description: "Open Graph Image as a Service",
+    tasks: ["image", "media", "automation", "seo"],
+    name: "og-image",
+    stars: 4100,
   },
 ];
 
