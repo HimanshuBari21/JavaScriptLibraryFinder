@@ -639,6 +639,13 @@ export const libraries: Library[] = [
     name: "og-image",
     stars: 4100,
   },
+  {
+    repository: "https://github.com/magicuidesign/magicui",
+    description: "About UI Library for Design Engineers. Animated components and effects you can copy and paste into your apps. Free. Open Source.",
+    tasks: ["UI components", "ui", "react", "css-effects", "components", "animation"],
+    name: "Magic UI",
+    stars: 15000,
+  }
 ];
 
 export function searchLibraries(query: string = ""): string[] {
